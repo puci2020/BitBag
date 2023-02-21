@@ -23,6 +23,7 @@ export default function useProducts() {
   const getRecommendedForYou = async () => {
     const response = await axios.get(`${API_URL}/products`);
     recommendedForYou.value = response.data['recommended-for-you'];
+    loading.value = false;
   }
 
 
