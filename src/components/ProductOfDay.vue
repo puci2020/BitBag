@@ -10,7 +10,7 @@ export default {
   setup(){
     const {loading, productOfDay, getProductOfDay} = useProducts()
 
-    getProductOfDay();
+    onMounted(()=> getProductOfDay());
 
     return {loading, productOfDay};
   }

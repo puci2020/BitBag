@@ -10,7 +10,7 @@ export default {
   setup(){
     const {loading, recommendedForYou, getRecommendedForYou} = useProducts()
 
-    getRecommendedForYou();
+    onMounted(()=> getRecommendedForYou());
 
     return {loading, recommendedForYou};
   }

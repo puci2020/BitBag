@@ -10,7 +10,7 @@ export default {
   setup(){
     const {loading, bestSalesProducts, getBestSalesProducts} = useProducts()
 
-    getBestSalesProducts();
+    onMounted(()=> getBestSalesProducts());
 
     return {loading, bestSalesProducts};
   }
